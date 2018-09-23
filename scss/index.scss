@@ -1,0 +1,97 @@
+@charset "utf-8";
+@import "common"; // 汎用設定
+@import "setting-bg"; // ページ全体の背景等の設定
+@import "page-common"; // ページ毎の設定
+@import "page-index";
+@import "page-intro";
+@import "page-history";
+@import "page-skill";
+@import "page-gallery";
+@import "page-end";
+$loading-w: 60px;
+$loading-h: 24px;
+/* 基礎タグ ---------------------------------*/
+
+/* loading画面 ---------------------*/
+
+#loader-bg {
+  position: fixed;
+  width: 110vw;
+  height: 110vh;
+  top: 0;
+  left: 0;
+  background-color: $accent-color1;
+  z-index: 10000;
+  #loader {
+    position: fixed;
+    top: 35%;
+    width: 100vw;
+    margin: auto;
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    z-index: 11000;
+    animation-name: loading-con;
+    animation-duration: 3s;
+    .des {
+      margin-top: 1em;
+    }
+    .img {
+      width: $loading-w;
+      height: $loading-h;
+      margin: auto;
+      background: url(../img/loading_chip.png) no-repeat;
+      zoom: 7;
+      background-position-x: $loading-w*0;
+      background-position-y: $loading-h*0;
+      animation: loading 1.5s steps(12) infinite;
+    }
+    @keyframes loading {
+      to {
+        background-position-x: -$loading-w*0;
+        background-position-y: -$loading-h*12;
+      }
+    }
+    .progress {
+      width: 30%;
+      height: .5em;
+      margin: .5em auto;
+      padding: 0;
+      background-color: rgba(0, 0, 0, .2);
+      border-radius: 10px;
+      .gage {
+        position: relative;
+        left: 0;
+        width: 0;
+        height: .5em;
+        margin: 0;
+        padding: 0;
+        background-color: $base-color1;
+        border-radius: 10px;
+        animation: progress-gage 2.8s;
+        animation-timing-function: linear;
+      }
+      @keyframes progress-gage {
+        90% {
+          width: 100%;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@keyframes loading-con {
+  0% {
+    transform: translate(0, 2em);
+    opacity: 0;
+  }
+  20% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+/* その他 -----------------------------------*/

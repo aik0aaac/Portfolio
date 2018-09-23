@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/* ---------------------------------------------- スマホ用CSS
+---------------------------------------------- */
+/* ---------------------------------------------- スマホ用CSS
+---------------------------------------------- */
+html { font-size: 10px; }
+
+header { text-align: center; }
+header #logo { margin: 0; margin-top: .5em; font-size: 3.5em; }
+header #menu { margin: 1em auto; text-align: center; }
+header #menu a { margin: auto; }
+
+.con-outer { margin-bottom: 20vh; }
+
+/* ページトップへ移動ボタン -----------*/
+#to-pagetop { width: 5rem; height: 5rem; font-size: 3rem; }
+
+/* loading画面 ---------------------*/
+#loader-bg { position: fixed; width: 110vw; height: 110vh; top: 0px; left: 0px; z-index: 10000; }
+#loader-bg #loader { position: fixed; margin-top: -90px; margin-left: -90px; font-size: 1.5rem; }
+
+/* 各タグに付ける ----------------------------*/
+#top .section { width: 90vw; margin: auto; }
+#top .section h1 { font-size: 3.5rem; }
+
+#profiel .con-inner { margin-top: 0; }
+#profiel .con-inner h2 { width: 90%; }
+#profiel .con-inner .section p { margin: 1em auto; padding: 1em; }
+#profiel .con-inner .section img { position: absolute; top: -14em; right: -6em; width: 20vw; }
+
+#gallery .con-inner ul { margin-top: 3em; }
+#gallery .con-inner ul li { width: 60vw; }
+
+#contact .con-inner p { margin: auto 2em; }
+#contact .con-inner .sns ul { margin-top: 2em; }
+#contact .con-inner .sns ul li { width: 4rem; font-size: 3rem; }
+
+/*# sourceMappingURL=index-sp.css.map */

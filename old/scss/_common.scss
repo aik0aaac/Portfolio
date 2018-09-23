@@ -1,0 +1,248 @@
+@charset "utf-8";
+$font1: "Mplus 1p";
+$accent-color1: #A9EEE6;
+$accent-color2: #F9A1BC;
+$base-color1: #FEFAEC;
+$base-color2: #625772;
+$base-color2-thin: #A69BB6;
+$accent-color3: #A6E4E7;
+$accent-color4: #EBCBAE;
+$base-color3: #F9F9F9;
+$base-color4: #8F8787;
+
+
+
+/* 基礎タグ ---------------------------------*/
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, .3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $base-color2;
+  border-radius: 10px;
+}
+
+html {
+  font-family: $font1;
+  font-size: 12px;
+}
+
+body {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  color: $base-color2;
+  background-color: $base-color1;
+  overflow-x: hidden;
+}
+
+a {
+  color: $base-color2;
+  text-decoration: none;
+  transition: .3s;
+}
+
+a:hover {
+  color: $base-color2-thin;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+/* ライブラリ等で追加された要素につけるCSS -------*/
+
+.fa-qiita {
+  font-size: .6em;
+  padding-bottom: .2em;
+}
+
+.fa-pixiv {
+  width: 4em;
+}
+
+/* その他 -----------------------------------*/
+
+.floatL {
+  float: left;
+}
+
+.floatR {
+  float: right;
+}
+
+.under-line {
+  border-bottom: 1px dotted $base-color2;
+}
+
+ul.no-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.inline > li {
+  display: inline-block;
+}
+
+.con-outer {
+  margin: 0;
+  margin-bottom: 30vh;
+  padding: 0;
+  width: 100vw;
+  .con-inner {
+    h1,
+    h2 {
+      width: 12em;
+      margin: 0 auto;
+      text-align: center;
+      border-bottom: 1px solid $base-color2;
+    }
+    h1 {
+      font-size: 4rem;
+    }
+    h2 {
+      font-size: 3rem;
+    }
+    h3 {
+      margin-top: 0;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  }
+}
+
+@keyframes show1 {
+  0% {
+    transform: translate(0, 2em);
+    opacity: .5;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+/* ページトップへ移動ボタン -----------*/
+
+#to-pagetop {
+  display: none;
+  position: fixed;
+  cursor: pointer;
+  right: 10vw;
+  bottom: 10vh;
+  width: 8rem;
+  height: 8rem;
+  font-size: 5rem;
+  color: $base-color3;
+  text-align: center;
+  background-color: $base-color2;
+  border-radius: 100px;
+  z-index: 10000;
+}
+
+/* ヘッダー ---------------------------------*/
+
+header {
+  position: relative;
+  margin: 0;
+  padding: 1em 3em;
+  background-color: $accent-color1;
+  z-index: 100;
+  #logo {
+    margin: 1em;
+    margin-bottom: 0;
+    font-size: 4em;
+    img {
+      width: 1em;
+    }
+    .word {
+      margin-left: 0.1em;
+    }
+  }
+  #menu {
+    margin: 1em;
+    font-size: 1.8rem;
+    text-align: right;
+    a {
+      display: inline-block;
+      text-align: center;
+      margin: auto 1em;
+      li {
+        border-bottom: 1px dotted $base-color2;
+      }
+      .mini {
+        margin: 0;
+        padding: 0em 1em .5em 1em;
+        font-size: .7em;
+      }
+    }
+    a:hover {
+      border-bottom: 1px solid $base-color2;
+    }
+  }
+}
+
+/* フッター ---------------------------------*/
+
+footer {
+  margin: 0;
+  height: 50vh;
+  padding: 1em;
+  font-size: 1.8rem;
+  text-align: center;
+  background-color: $base-color4;
+  z-index: 100;
+  #logo {
+    margin: .5em auto;
+    font-size: 2.5rem;
+  }
+  a {
+    color: $accent-color4;
+  }
+  a:hover {
+    color: $accent-color4;
+    opacity: .5;
+  }
+  ul {
+    margin-left: 1em;
+  }
+  li.first {
+    border-bottom: 1px solid $accent-color4;
+  }
+  li:not(.first) {
+    font-size: .8em;
+    text-align: left;
+  }
+  .mini {
+    margin-left: .5em;
+    font-size: .6em;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  .sns {
+    a {
+      display: inline-block;
+      li {
+        width: 2rem;
+        margin: 0rem .5rem;
+        padding: 1rem 1.5rem;
+        font-size: 2rem;
+        text-align: center;
+        border: 1px solid $accent-color4;
+        border-radius: 100px;
+      }
+    }
+  }
+}

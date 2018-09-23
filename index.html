@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>POP POM PON!</title>
+  <!-- ライブラリファイル -->
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+  <!--  <link href="lib/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">-->
+  <link rel="stylesheet" href="lib/jquery.fancybox.css" media="screen">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
+  <!--   <link href="lib/swiper.min.css" rel="stylesheet">-->
+
+  <!-- 自作ファイル群 -->
+  <link rel="stylesheet" href="css/index.css">
+  <!-- Google Fonts+ -->
+  <link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" />
+  <!--アイコン-->
+  <link rel="icon" sizes="196x196" href="img/logo.ico">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/logo.ico">
+</head>
+
+<body>
+
+  <!-- Now Loading -->
+  <div id="loader-bg">
+    <div id="loader">
+      <div class="img dot"></div>
+      <div class="progress">
+        <div class="gage"></div>
+      </div>
+      <p class="des">ロード中...</p>
+    </div>
+  </div>
+
+
+  <!-- header -->
+  <header class="dot">
+    <div id="title">POP POM PON!</div>
+    <div class="sns">
+      <ul class="img no-list inline">
+        <a href="https://twitter.com/aik0aaac" target="_blank">
+          <li class="twitter">
+            <i class="fa fa-twitter"></i>
+          </li>
+          <div class="balloon">Twitter</div>
+        </a>
+        <a href="https://www.facebook.com/aik0aaac" target="_blank">
+          <li class="facebook">
+            <i class="fa fa-facebook"></i>
+          </li>
+          <div class="balloon">facebook</div>
+        </a>
+      </ul>
+    </div>
+  </header>
+
+  <!-- 各ページへ遷移するボタン -->
+  <div id="page-ctrl">
+    <ul class="no-list inline left">
+      <li id="index">
+        <div class="ttl">最初に</div>
+        <div class="sub">Index</div>
+        <img src="img/page-ctrl-index.png" alt="最初に">
+      </li>
+      <li id="intro">
+        <div class="ttl">自己紹介</div>
+        <div class="sub">Introduction</div>
+        <img src="img/page-ctrl-intro.png" alt="自己紹介" class="dot">
+      </li>
+      <li id="history">
+        <div class="ttl">経歴</div>
+        <div class="sub">History</div>
+        <img src="img/page-ctrl-history.png" alt="経歴" class="dot">
+      </li>
+    </ul>
+    <ul class="no-list inline right">
+      <li id="skill">
+        <div class="ttl">スキル</div>
+        <div class="sub">Skill</div>
+        <img src="img/page-ctrl-skill.png" alt="スキル" class="dot">
+      </li>
+      <li id="gallery">
+        <div class="ttl">作品集</div>
+        <div class="sub">Gallery</div>
+        <img src="img/page-ctrl-gallery.png" alt="作品集" class="dot">
+      </li>
+      <li id="end">
+        <div class="ttl">最後に</div>
+        <div class="sub">End</div>
+        <img src="img/page-ctrl-end.png" alt="最後に" class="dot">
+      </li>
+    </ul>
+  </div>
+
+  <!-- 各ページ出力 -->
+  <main class="dot">
+    <div id="cloud" class="dot"></div>
+    <div id="page-display"></div>
+  </main>
+
+  <!-- 地面の部分 -->
+  <div id="field" class="dot">
+    <div id="bg"></div>
+    <!-- キャラのイメージ画像用div -->
+    <div id="chara">
+      <div id="def" class="dot chara-img"></div>
+    </div>
+    <div id="next">
+      <div class="ttl">NEXT<i class="fa fa-angle-right"></i></div>
+      <div class="sub">自己紹介へ</div>
+    </div>
+  </div>
+
+
+
+  <!-- ライブラリファイル -->
+  <script src="lib/jquery-3.1.1.min.js"></script>
+  <script src="lib/jquery.fancybox.pack.js"></script>
+  <script src="lib/masonry.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <!--  <script src="lib/imagesloaded.pkgd.min.js"></script>-->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js "></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+
+  <!-- 自作ファイル群 -->
+  <script type="text/javascript" src="script/index.js"></script>
+  <script type="text/javascript" src="script/page-change.js"></script>
+  <script type="text/javascript" src="script/chara.js"></script>
+  <script type="text/javascript" src="script/main.js"></script>
+
+</body>
+
+</html>

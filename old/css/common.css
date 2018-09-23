@@ -1,0 +1,164 @@
+/* 基礎タグにつけるCSS ---------------------*/
+@font-face{
+    font-family: "Mamelon";
+    src: url('../font/Mamelon.otf');
+}
+html{
+    width: 100%;
+	font-family: "Mamelon";
+	font-size: 16px;
+}
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+body:after {/*擬似要素をつくる*/
+    position: fixed;/*固定配置*/
+    top: 0; left: 0;/*左上に固定*/
+    width: 100%; height: 100%;/*画面全体を覆う*/
+    content: "";
+    background-color: #99CFE5;
+    background: -webkit-linear-gradient(top,#44A5CB,#99CFE5 50%,#F4D2DE);
+    background: -o-linear-gradient(top,#44A5CB,#99CFE5 50%,#F4D2DE);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99CFE5', endColorstr='#F4D2DE',GradientType=0 );/*IE9以下への対応*/
+    background: linear-gradient(to bottom,#44A5CB,#99CFE5 50%,#F4D2DE);
+    z-index: -100;
+}
+/*
+    background-image: -webkit-gradient(
+                  linear
+                , left top
+                , left bottom
+                , from(#44A5CB)
+                , color-stop(0.5, #99CFE5)
+                , to(#F4D2DE));
+*/
+a{
+    color: #000;
+    text-decoration: none;
+    transition: .3s;
+}
+a:hover{
+    color: #999;
+}
+header{
+    margin: 0;
+    width: 100%;
+    padding: 1em;
+    padding-left: 3em;
+    font-size: .8rem;
+    background-color: #eee;
+}
+h1, h2, h3, h4, h5, h6{
+    margin: .2em 0;
+    font-weight: normal;
+}
+li{
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+}
+/* その他タグにつけるCSS ------------------------------*/
+.sub{
+    font-size: .7em;
+    color: #888;
+}
+h1 .sub{
+    color: #fff;
+}
+.contents>p{
+    padding-left: 2em;
+}
+ul.no-list{
+    list-style: none;
+}
+ul.no-list li{
+    display: inline-block;
+    margin: 1em 1em;
+}
+#cherry img{
+    position: fixed;
+    bottom: 0%;
+    z-index: -50;
+}
+#c1-1{
+    left: 0%;
+    width: 10rem;
+}
+#c1-2{
+    left: 5%;
+    width: 13rem;
+}
+#c2-1{
+    left: 10%;
+    width: 10rem;
+}
+#c2-2{
+    left: 15%;
+    width: 15rem;
+}
+#cb1{
+    left: 0%;
+    width: 35rem;
+}
+#c3-1{
+    left: 40%;
+    width: 15rem;
+}
+#c3-2{
+    left: 45%;
+    width: 10rem;
+}
+#c4-1{
+    left: 50%;
+    width: 15rem;
+}
+#c4-2{
+    left: 60%;
+    width: 11rem;
+}
+#c5-1{
+    left: 65%;
+    width: 10rem;
+}
+#c5-2{
+    left: 70%;
+    width: 13rem;
+}
+#c6-1{
+    left: 75%;
+    width: 10rem;
+}
+#c6-2{
+    left: 80%;
+    width: 15rem;
+}
+#c7-1{
+    left: 85%;
+    width: 10rem;
+}
+#c7-2{
+    left: 90%;
+    width: 12rem;
+}
+#cb2{
+    left: 50%;
+    width: 25rem;
+}
+/*===============================================
+●smart.css  画面の横幅が640pxまで
+===============================================*/
+@media only screen and (max-width:640px){
+/*     img{
+        max-width: 100%;
+        height: auto;
+        width /***/:auto;　
+    } */
+    /* ～以下、画面の横幅が640pxまでの場合のスタイル記入～ */
+    body{
+    	font-size: 10px;
+    }
+}

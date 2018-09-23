@@ -1,0 +1,19 @@
+// -----------------------------------------
+// page-end.css
+// page-end.htmlの設定
+// -----------------------------------------
+#page-end {
+  color: #fff;
+  h1 {
+    width: 100%;
+    padding: .5em;
+    font-size: 5.5em;
+    line-height: 1.5em;
+    text-align: center;
+    background-color: $base-color1;
+  }
+  .contact {
+    font-size: 3em;
+    text-align: center;
+  }
+}
