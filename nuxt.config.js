@@ -5,7 +5,7 @@ const routerBase =
   process.env.DEPLOY_ENV === 'GH_PAGES'
     ? {
         router: {
-          base: '/<repository-name>/',
+          base: '/Portfolio/',
         },
       }
     : {}
@@ -69,5 +69,7 @@ export default {
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {},
+  build: {
+    publicPath: '/Portfolio/_nuxt/',
+  },
 }
