@@ -17,6 +17,10 @@ install:
 script:
   - echo "Skipping tests"
 
+before_deploy:
+  # Github Pageではルートディレクトリアクセス時index.htmlよりもREADME.mdが優先されるので退避
+  - mkdir dist/.github
+  - mv dist/README.md dist/.github
 deploy:
   provider: pages
   skip-cleanup: true
